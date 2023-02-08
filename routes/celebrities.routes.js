@@ -15,7 +15,6 @@ router.get('/', (req, res, next) => {
 })
 
 
-
 router.get('/create', (req, res, next) => {
     res.render('celebrities/new-celebrities.hbs')
 

@@ -1,5 +1,4 @@
-<h1>Create Movie</h1>
-
+<h2>Create Movie</h2>
 <form action="/movies/create" method="post">
   <label> Title:
     <input type="text" name="title" />
@@ -13,16 +12,15 @@
     <input type="text" name="plot" />
   </label>
 
-<label>Cast:
-  <select name="cars" id="cars" multiple>
-        <option value="volvo">Volvo</option>
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="opel">Opel</option>
-        <option value="audi">Audi</option>
+   <label> Cast:
+    <select name="cast" id="cast" multiple>
+        {{#each celebrity}}
+            <option value="{{this._id}}">{{this.name}}</option>
+        {{/each}}
     </select>
   </label>
 
+  
 
   <button type="submit"> Create </button>
 </form>
